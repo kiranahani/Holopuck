@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <a-scene background="color: #ECECEC">
+      <a-assets>
+        <a-asset-item id="cityModel" src="./holo1.gltf"></a-asset-item>
+      </a-assets>
+      <a-entity  gltf-model="#cityModel" 
+      scale="1 1 1" 
+      position="0 2 -3" 
+      modify-materials
+      animation__mouseenter="property: object3D.position.z; from: -3; to: -2;  dir: alternate; dur: 2000; loop: false;  startEvents: mouseenter"
+      animation__mouseleave="property: object3D.position.z; from: -2; to: -3;  dir: alternate; dur: 2000; loop: false; startEvents: mouseleave">
+      ></a-entity>
+      <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
